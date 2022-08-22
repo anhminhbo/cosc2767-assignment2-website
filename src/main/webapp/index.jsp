@@ -14,7 +14,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <title>Hello DevOps Students WTFFF!</title>
+    <title>Hello DevOps Students!</title>
   </head>
   <body>
     <!-- The content of the website starts here now! -->
@@ -45,8 +45,8 @@
       </p>
 
       <!-- You only need to change these information, starts here! -->
-      <p>Here is the information you need to change: Finally</p>
-      <span class="badge badge-primary">Minh ne</span>
+      <p>Here is the information you need to change:</p>
+      <span class="badge badge-primary">Your name</span>
       <br />
       <span class="badge badge-secondary">Your student ID (sID)</span>
       <br />
