@@ -77,7 +77,7 @@ sudo service docker start;
 sudo docker stop tomcat-container;
 sudo docker rm tomcat-container;
 sudo docker rmi anhminhbo/tomcat_asm2_3931605:latest;
-sudo echo -e "FROM tomcat:latest\nRUN cp -R /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps\nCOPY ./*.war /usr/local/tomcat/webapps" > Dockerfile;
+sudo echo -e "FROM tomcat:latest\nRUN cp -R /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps\nCOPY ./*.war /usr/local/tomcat/webapps"> Dockerfile;
 sudo docker logout;
 sudo docker login -u "anhminhbo" -p "Anhminh1234*" docker.io;
 sudo docker build -t tomcat_asm2_3931605:latest .;

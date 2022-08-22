@@ -28,16 +28,16 @@ COPY jenkins.plugins.publish_over_ssh.BapSshPublisherPlugin.xml ./var/jenkins_ho
 # For pushing on DockerHub
 
 # build the image locally
-# docker build -t jenkins_asm2_39316055:latest .
+# docker build -t jenkins_asm2_3931605:latest .
 
 # create tag to push the image to dockerhub
-# docker tag jenkins_asm2_39316055:latest anhminhbo/jenkins_asm2_39316055:latest
+# docker tag jenkins_asm2_3931605:latest anhminhbo/jenkins_asm2_3931605:latest
 
 #  push the docker image to dockerhub
-# docker push anhminhbo/jenkins_asm2_39316055:latest
+# docker push anhminhbo/jenkins_asm2_3931605:latest
 
 # Run container based on image on Github
-# docker run -d --name jenkins-container --rm -p 8080:8080 anhminhbo/jenkins_asm2_39316055:latest
+# docker run -d --name jenkins-container --rm -p 8080:8080 anhminhbo/jenkins_asm2_3931605:latest
 
 # Go inside the jenkins-container
 # docker exec -it jenkins-container /bin/bash
