@@ -1,0 +1,35 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<jenkins.plugins.publish__over__ssh.BapSshPublisherPlugin_-Descriptor plugin="publish-over-ssh@1.24">
+    <hostConfigurations>
+        <jenkins.plugins.publish__over__ssh.BapSshHostConfiguration>
+            <name>tomcat-server</name>
+            <hostname>3.83.221.62</hostname>
+            <username>tomcatslave</username>
+            <secretPassword>{AQAAABAAAAAQon5fA0DJadZN5Ud4lhXgfx74ThuwrMaCt1nVI7l2V38=}</secretPassword>
+            <remoteRootDir></remoteRootDir>
+            <port>22</port>
+            <commonConfig class="jenkins.plugins.publish_over_ssh.BapSshCommonConfiguration">
+                <secretPassphrase>{AQAAABAAAAAQvVuGa9uNf5TLkzsXvZaGSLAr3VxVA9Q06u8FopZgRdQ=}</secretPassphrase>
+                <key></key>
+                <keyPath></keyPath>
+                <disableAllExec>false</disableAllExec>
+            </commonConfig>
+            <timeout>300000</timeout>
+            <overrideKey>true</overrideKey>
+            <disableExec>false</disableExec>
+            <keyInfo>
+                <secretPassphrase>{AQAAABAAAAAgQ3LSJdVLWO0TJ82dPd9iu0qwU5wl+4kkcLpbsvuUMk7dAfovx1u7S4a7DCuPKvEL}</secretPassphrase>
+                <key></key>
+                <keyPath></keyPath>
+            </keyInfo>
+            <jumpHost></jumpHost>
+            <proxyType></proxyType>
+            <proxyHost></proxyHost>
+            <proxyPort>0</proxyPort>
+            <proxyUser></proxyUser>
+            <secretProxyPassword>{AQAAABAAAAAQesUuC4TZDPOWRL+c7YUyRuRWQ3V2LjaT6DcByo6pWO4=}</secretProxyPassword>
+        </jenkins.plugins.publish__over__ssh.BapSshHostConfiguration>
+    </hostConfigurations>
+    <commonConfig reference="../hostConfigurations/jenkins.plugins.publish__over__ssh.BapSshHostConfiguration/commonConfig"/>
+    <defaults class="jenkins.plugins.publish_over_ssh.options.SshPluginDefaults"/>
+</jenkins.plugins.publish__over__ssh.BapSshPublisherPlugin_-Descriptor>

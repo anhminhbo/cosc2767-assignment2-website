@@ -1,0 +1,46 @@
+#   RMIT University Vietnam
+#   Course: COSC2767 Systems Deployment and Operations
+#   Semester: 2022B
+#   Assessment: Assignment 2
+#   Author: Nguyen Cuong Anh Minh
+#   ID: 3931605
+#   Created  date: 22/08/2022
+#   Last modified: 22/08/2022
+#   Acknowledgement: Acknowledge the resources that you use here. 
+# Pull the latest jenkins latest
+FROM jenkins/jenkins:latest
+# Switch to root user
+USER root
+# Disable SetupWizards
+ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
+# Make jenkins container to install necessary plugins
+COPY --chown=jenkins:jenkins plugins.txt /usr/share/jenkins/ref/plugins.txt
+RUN jenkins-plugin-cli -f /usr/share/jenkins/ref/plugins.txt
+# Copy jenkins-cli.jar to the Jenkins Container
+COPY jenkins-cli.jar .
+# Copy job.xml to configure the jobs
+COPY job.xml .
+# Copy hudson.tasks.Maven.xml to config Maven
+COPY hudson.tasks.Maven.xml ./var/jenkins_home/
+# Copy jenkins.plugins.publish_over_ssh.BapSshPublisherPlugin.xml to config Publish Over SSH
+COPY jenkins.plugins.publish_over_ssh.BapSshPublisherPlugin.xml ./var/jenkins_home/
+
+# For pushing on DockerHub
+
+# build the image locally
+# docker build -t jenkins_asm2_39316055:latest .
+
+# create tag to push the image to dockerhub
+# docker tag jenkins_asm2_39316055:latest anhminhbo/jenkins_asm2_39316055:latest
+
+#  push the docker image to dockerhub
+# docker push anhminhbo/jenkins_asm2_39316055:latest
+
+# Run container based on image on Github
+# docker run -d --name jenkins-container --rm -p 8080:8080 anhminhbo/jenkins_asm2_39316055:latest
+
+# Go inside the jenkins-container
+# docker exec -it jenkins-container /bin/bash
+
+# Create new job in the Jenkins Container based on the job.xml
+# java -jar jenkins-cli.jar -s http://54.196.145.233:8080/ -webSocket create-job PullFromGithubBuildFromMavenAndDeployToTomcatServer < job.xml
