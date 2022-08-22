@@ -28,4 +28,6 @@ COPY ./*.war /usr/local/tomcat/webapps
 # Run container based on image on Github
 # docker run -d --name tomcat-container --rm -p 8080:8080 anhminhbo/tomcat_asm2_3931605:latest
 
-#sudo docker login -u anhminhbo -p Anhminh1234*;
+# Login dockerhub
+#sudo docker login -u "anhminhbo" -p "Anhminh1234*" docker.io;
+#sudo docker logout;
