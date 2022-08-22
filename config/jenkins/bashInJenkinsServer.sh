@@ -19,7 +19,7 @@ sudo docker rmi --force anhminhbo/jenkins_asm2_3931605:latest
 sudo rm -rf Dockerfile
 
 # Run the container pull from DockerHub
-docker run -d --name jenkins-container --rm -p 8080:8080 anhminhbo/jenkins_asm2_3931605:latest
+sudo docker run -d --name jenkins-container --rm -p 8080:8080 anhminhbo/jenkins_asm2_3931605:latest
 
 # Go inside the jenkins container
-docker exec -it jenkins-container /bin/bash
+sudo docker exec -it jenkins-container /bin/bash
