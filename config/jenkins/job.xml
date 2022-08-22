@@ -76,14 +76,19 @@
 sudo service docker start;
 sudo docker stop tomcat-container;
 sudo docker rm tomcat-container;
-sudo docker rmi anhminhbo/tomcat_asm2_3931605:latest;
+sudo docker rmi --force anhminhbo/tomcat_asm2_3931605:latest;
+sudo docker rmi --force tomcat_asm2_3931605;
+sudo docker rmi --force tomcat;
 sudo echo -e "FROM tomcat:latest\nRUN cp -R /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps\nCOPY ./*.war /usr/local/tomcat/webapps"> Dockerfile;
 sudo docker logout;
 sudo docker login -u "anhminhbo" -p "Anhminh1234*" docker.io;
 sudo docker build -t tomcat_asm2_3931605:latest .;
 sudo docker tag tomcat_asm2_3931605:latest anhminhbo/tomcat_asm2_3931605:latest;
 sudo docker push anhminhbo/tomcat_asm2_3931605:latest;
-sudo docker rmi anhminhbo/tomcat_asm2_3931605:latest;
+sudo docker rmi --force anhminhbo/tomcat_asm2_3931605:latest;
+sudo docker rmi --force tomcat_asm2_3931605;
+sudo docker rmi --force tomcat;
+sudo docker image prune;
 sudo docker run -d --name tomcat-container --rm -p 8080:8080 anhminhbo/tomcat_asm2_3931605:latest;</execCommand>
                                 <execTimeout>120000</execTimeout>
                                 <usePty>false</usePty>

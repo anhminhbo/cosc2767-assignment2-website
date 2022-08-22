@@ -14,8 +14,11 @@ sudo docker build -t jenkins_asm2_3931605:latest .
 sudo docker tag tomcat_asm2_3931605:latest anhminhbo/tomcat_asm2_3931605:latest
 sudo docker push anhminhbo/jenkins_asm2_3931605:latest
 
-# Clean up Dockerfile and current image
+# Clean up Dockerfile and current images
+sudo docker rmi --force jenkins_asm2_3931605:latest
 sudo docker rmi --force anhminhbo/jenkins_asm2_3931605:latest
+sudo docker rmi --force jenkins/jenkins:latest
+sudo docker image prune
 sudo rm -rf Dockerfile
 
 # Run the container pull from DockerHub
