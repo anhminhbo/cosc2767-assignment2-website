@@ -45,7 +45,7 @@
       </p>
 
       <!-- You only need to change these information, starts here! -->
-      <p>Here is the information you need to change: not yet</p>
+      <p>Here is the information you need to change: Finally</p>
       <span class="badge badge-primary">Minh ne</span>
       <br />
       <span class="badge badge-secondary">Your student ID (sID)</span>

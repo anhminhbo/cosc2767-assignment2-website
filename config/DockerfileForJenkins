@@ -43,4 +43,4 @@ COPY jenkins.plugins.publish_over_ssh.BapSshPublisherPlugin.xml ./var/jenkins_ho
 # docker exec -it jenkins-container /bin/bash
 
 # Create new job in the Jenkins Container based on the job.xml
-# java -jar jenkins-cli.jar -s http://54.196.145.233:8080/ -webSocket create-job PullFromGithubBuildFromMavenAndDeployToTomcatServer < job.xml
+# java -jar jenkins-cli.jar -s http://18.215.182.164:8080/ -webSocket create-job PullFromGithubBuildFromMavenAndDeployToTomcatServer < job.xml

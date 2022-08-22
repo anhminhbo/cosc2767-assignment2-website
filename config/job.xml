@@ -74,10 +74,15 @@
                                 <patternSeparator>[, ]+</patternSeparator>
                                 <execCommand>cd /home/tomcatslave;
 sudo service docker start;
-docker stop tomcat-container;
-docker rm tomcat-container;
-docker rmi anhminhbo/tomcat_asm2_3931605:latest;
-docker run -d --name tomcat-container --rm -p 8080:8080 anhminhbo/tomcat_asm2_3931605:latest;</execCommand>
+sudo docker stop tomcat-container;
+sudo docker rm tomcat-container;
+sudo docker rmi anhminhbo/tomcat_asm2_3931605:latest;
+sudo echo -e "FROM tomcat:latest\nRUN cp -R /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps\nCOPY ./*.war /usr/local/tomcat/webapps" > Dockerfile;
+sudo docker build -t tomcat_asm2_3931605:latest .;
+sudo docker tag tomcat_asm2_3931605:latest anhminhbo/tomcat_asm2_3931605:latest;
+sudo docker push anhminhbo/tomcat_asm2_3931605:latest;
+sudo docker rmi anhminhbo/tomcat_asm2_3931605:latest;
+sudo docker run -d --name tomcat-container --rm -p 8080:8080 anhminhbo/tomcat_asm2_3931605:latest;</execCommand>
                                 <execTimeout>120000</execTimeout>
                                 <usePty>false</usePty>
                                 <useAgentForwarding>false</useAgentForwarding>
