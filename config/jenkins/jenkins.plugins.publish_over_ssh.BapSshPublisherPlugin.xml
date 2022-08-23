@@ -3,7 +3,7 @@
     <hostConfigurations>
         <jenkins.plugins.publish__over__ssh.BapSshHostConfiguration>
             <name>tomcat-server</name>
-            <hostname>3.83.221.62</hostname>
+            <hostname>172.31.88.113</hostname>
             <username>tomcatslave</username>
             <secretPassword>{AQAAABAAAAAQon5fA0DJadZN5Ud4lhXgfx74ThuwrMaCt1nVI7l2V38=}</secretPassword>
             <remoteRootDir></remoteRootDir>
@@ -33,3 +33,12 @@
     <commonConfig reference="../hostConfigurations/jenkins.plugins.publish__over__ssh.BapSshHostConfiguration/commonConfig"/>
     <defaults class="jenkins.plugins.publish_over_ssh.options.SshPluginDefaults"/>
 </jenkins.plugins.publish__over__ssh.BapSshPublisherPlugin_-Descriptor>
+<!-- #   RMIT University Vietnam
+#   Course: COSC2767 Systems Deployment and Operations
+#   Semester: 2022B
+#   Assessment: Assignment 2
+#   Author: Nguyen Cuong Anh Minh
+#   ID: 3931605
+#   Created  date: 22/08/2022
+#   Last modified: 22/08/2022
+#   Acknowledgement: Acknowledge the resources that you use here.  -->
