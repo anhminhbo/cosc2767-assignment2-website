@@ -9,4 +9,6 @@
 #   Acknowledgement: Acknowledge the resources that you use here.
 
 # Change the public Id because ec2 automatically switch to new public Id
-scp -r ./jenkins/* jenkinsmaster@54.224.88.62:
+scp -o PubkeyAuthentication=no -r ./jenkins/* jenkinsmaster@:
+# To ssh to a remote server without Publickey
+# ssh -o PubkeyAuthentication=no
