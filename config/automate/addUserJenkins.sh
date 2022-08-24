@@ -51,7 +51,6 @@ service sshd reload
 
 # exit to start switching back to new user
 echo "exit to start switching back to new user"
-exit
 
 
 
